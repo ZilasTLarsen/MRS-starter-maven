@@ -1,7 +1,9 @@
 package dk.easv.mrs.DAL;
-import dk.easv.mrs.BE.Movie;
+//Java imports
 import java.util.ArrayList;
 import java.util.List;
+//Project imports
+import dk.easv.mrs.BE.Movie;
 
 public class MovieDAO_Mock implements IMovieDataAccess {
 
@@ -21,7 +23,7 @@ public class MovieDAO_Mock implements IMovieDataAccess {
     }
 
     @Override
-    public Movie createMovie(String title, int year) throws Exception {
+    public Movie createMovie(Movie newMovie) throws Exception {
         return null;
     }
 

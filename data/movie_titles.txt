@@ -17764,4 +17764,24 @@
 17771,1966,Django
 17772,2015,Django Unchained
 17773,2015,Django Unchained
-17774,2015,Django Unchained
+17774,2015,Django Unchained17775,1967,Din mor
+17775,1967,Din far
+17776,1967,Din far
+17777,1967,Din far
+17778,1967,Din far
+17779,1967,Din far
+17780,1967,Din mor
+17781,1967,Din mor
+17782,1967,Din mor
+17783,1967,Din mor
+17784,1967,Din mor
+17785,1967,Din mor
+17786,1967,Din mor
+17787,1967,Tobias er cute
+17788,1967,Tobias er cute
+17789,1967,Tobias er cute
+17790,1967,Tobias er cute
+17791,1967,Tobias har briller
+17792,1967,Tobias har briller
+17793,1967,Tobias har briller
+17794,1967,Tobias har briller

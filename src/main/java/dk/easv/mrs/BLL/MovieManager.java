@@ -1,9 +1,11 @@
 package dk.easv.mrs.BLL;
+//Project imports
 import dk.easv.mrs.BE.Movie;
 import dk.easv.mrs.BLL.util.MovieSearcher;
 import dk.easv.mrs.DAL.IMovieDataAccess;
 import dk.easv.mrs.DAL.MovieDAO_File;
-import dk.easv.mrs.DAL.MovieDAO_Mock;
+
+//Java imports
 import java.util.List;
 
 public class MovieManager {
@@ -12,7 +14,7 @@ public class MovieManager {
     private IMovieDataAccess movieDAO;
 
     public MovieManager() {
-        movieDAO = new MovieDAO_Mock();
+        movieDAO = new MovieDAO_File();
     }
 
     public List<Movie> getAllMovies() throws Exception {
@@ -23,5 +25,9 @@ public class MovieManager {
         List<Movie> allMovies = getAllMovies();
         List<Movie> searchResult = movieSearcher.search(allMovies, query);
         return searchResult;
+    }
+
+    public Movie createMovie(Movie newMovie) throws Exception {
+       return movieDAO.createMovie(newMovie);
     }
 }

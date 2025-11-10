@@ -1,11 +1,15 @@
 package dk.easv.mrs.GUI.Controller;
-
+//Project imports
 import dk.easv.mrs.BE.Movie;
 import dk.easv.mrs.GUI.Model.MovieModel;
+//JavaFX imports
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+//Java imports
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -16,8 +20,12 @@ public class MovieViewController implements Initializable {
     public ListView<Movie> lstMovies;
     private MovieModel movieModel;
 
-    public MovieViewController()  {
+    @FXML
+    private TextField txtTitle, txtYear;
 
+
+
+    public MovieViewController() {
         try {
             movieModel = new MovieModel();
         } catch (Exception e) {
@@ -26,10 +34,8 @@ public class MovieViewController implements Initializable {
         }
     }
 
-
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         lstMovies.setItems(movieModel.getObservableMovies());
 
         txtMovieSearch.textProperty().addListener((observableValue, oldValue, newValue) -> {
@@ -40,14 +46,25 @@ public class MovieViewController implements Initializable {
                 e.printStackTrace();
             }
         });
-
     }
 
-    private void displayError(Throwable t)
-    {
+    private void displayError(Throwable t) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Something went wrong");
         alert.setHeaderText(t.getMessage());
         alert.showAndWait();
+    }
+    @FXML
+    private void btnHandleClick(ActionEvent actionEvent) throws Exception {
+        // Get user movie data from ui
+        String title = txtTitle.getText();
+        int year = Integer.parseInt(txtYear.getText());
+
+        // new movie object
+        Movie newMovie = new Movie(-1, year, title);
+
+        // call model to create movie
+        movieModel.createMovie(newMovie);
+
     }
 }
