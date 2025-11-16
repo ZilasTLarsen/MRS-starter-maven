@@ -29,7 +29,7 @@ public class MovieViewController implements Initializable {
         try {
             movieModel = new MovieModel();
         } catch (Exception e) {
-            displayError(e);
+            //displayError(e);
             e.printStackTrace();
         }
     }
@@ -37,6 +37,14 @@ public class MovieViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lstMovies.setItems(movieModel.getObservableMovies());
+        lstMovies.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, selectedMovie) ->
+        {
+            if (selectedMovie != null) {
+                txtTitle.setText(selectedMovie.getTitle());
+                txtYear.setText(String.valueOf(selectedMovie.getYear()));
+            }
+
+        });
 
         txtMovieSearch.textProperty().addListener((observableValue, oldValue, newValue) -> {
             try {
@@ -66,5 +74,35 @@ public class MovieViewController implements Initializable {
         // call model to create movie
         movieModel.createMovie(newMovie);
 
+    }
+    @FXML
+    private void onUpdate(ActionEvent actionEvent) {
+       Movie selectedMovie = lstMovies.getSelectionModel().getSelectedItem();
+
+       if (selectedMovie != null) {
+
+           selectedMovie.setTitle(txtTitle.getText());
+           selectedMovie.setYear(Integer.parseInt(txtYear.getText()));
+
+           try {
+               movieModel.updateMovie(selectedMovie);
+           } catch (Exception err) {
+               displayError(err);
+           }
+           lstMovies.refresh();
+       }
+    }
+
+    @FXML
+    private void onDelete(ActionEvent actionEvent) {
+        Movie selectedMovie = lstMovies.getSelectionModel().getSelectedItem();
+
+        if (selectedMovie != null) {
+            try {
+                movieModel.deleteMovie(selectedMovie);
+            } catch (Exception err) {
+                displayError(err);
+            }
+        }
     }
 }

@@ -1,19 +1,4 @@
-1,2003,Dinosaur Planet
-2,2004,Isle of Man TT 2004 Review
-3,1997,Character
-4,1994,Paula Abdul's Get Up & Dance
-5,2004,The Rise and Fall of ECW
-6,1997,Sick
-7,1992,8 Man
-8,2004,What the #$*! Do We Know!?
-9,1991,Class of Nuke 'Em High 2
-10,2001,Fighter
-11,1999,Full Frame: Documentary Shorts
-12,1947,My Favorite Brunette
-13,2003,Lord of the Rings: The Return of the King: Extended Edition: Bonus Material
-14,1982,Nature: Antarctica
-15,1988,Neil Diamond: Greatest Hits Live
-16,1996,Screamers
+1,2003,Dinosaur Planet .,.--.
 17,2005,7 Seconds
 18,1994,Immortal Beloved
 19,2000,By Dawn's Early Light
@@ -17764,24 +17749,8 @@
 17771,1966,Django
 17772,2015,Django Unchained
 17773,2015,Django Unchained
-17774,2015,Django Unchained17775,1967,Din mor
-17775,1967,Din far
-17776,1967,Din far
-17777,1967,Din far
-17778,1967,Din far
-17779,1967,Din far
-17780,1967,Din mor
-17781,1967,Din mor
-17782,1967,Din mor
-17783,1967,Din mor
-17784,1967,Din mor
-17785,1967,Din mor
-17786,1967,Din mor
-17787,1967,Tobias er cute
-17788,1967,Tobias er cute
-17789,1967,Tobias er cute
-17790,1967,Tobias er cute
-17791,1967,Tobias har briller
-17792,1967,Tobias har briller
-17793,1967,Tobias har briller
-17794,1967,Tobias har briller
+17774,2015,Django Unchained17775
+17775,20000,Dinosaur Planet - miaw
+17776,1967,Jonas skaldede æg
+17777,1967,Jonas skaldede æg
+17778,1967,Jonas skaldede æg

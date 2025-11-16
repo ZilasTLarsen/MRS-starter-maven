@@ -30,4 +30,11 @@ public class MovieManager {
     public Movie createMovie(Movie newMovie) throws Exception {
        return movieDAO.createMovie(newMovie);
     }
+
+    public void updateMovie(Movie movieToBeUpdated) throws Exception {
+        movieDAO.updateMovie(movieToBeUpdated);
+    }
+    public void deleteMovie(Movie movieToBeDeleted) throws Exception {
+        movieDAO.deleteMovie(movieToBeDeleted);
+    }
 }
