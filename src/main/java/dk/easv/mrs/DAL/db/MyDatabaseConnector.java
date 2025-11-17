@@ -19,10 +19,10 @@ public class MyDatabaseConnector {
         databaseProperties.load(Files.newInputStream(Paths.get(PROP_FILE)));
 
         dataSource = new SQLServerDataSource();
-        dataSource.setServerName("10.176.111.34");
-        dataSource.setDatabaseName("zillar01_MRS_2025");
-        dataSource.setUser("CS2025a_e_37");
-        dataSource.setPassword("CS2025aE37#23");
+        dataSource.setServerName("Server");
+        dataSource.setDatabaseName("Database");
+        dataSource.setUser("User");
+        dataSource.setPassword("Password");
         dataSource.setPortNumber(1433);
         dataSource.setTrustServerCertificate(true);
     }

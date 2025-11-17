@@ -105,4 +105,16 @@ public class MovieViewController implements Initializable {
             }
         }
     }
+
+    @FXML
+    private void onRefresh(ActionEvent actionEvent) {
+        try{
+            txtMovieSearch.clear();
+            movieModel.refreshMovies();
+            lstMovies.refresh();
+        } catch (Exception e){
+            displayError(e);
+            e.printStackTrace();
+        }
+    }
 }

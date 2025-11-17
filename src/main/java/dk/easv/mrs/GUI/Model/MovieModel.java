@@ -46,4 +46,8 @@ public class MovieModel {
         movieManager.deleteMovie(movieToBeDeleted);
         moviesToBeViewed.remove(movieToBeDeleted);
     }
+    public void refreshMovies() throws Exception {
+        moviesToBeViewed.clear();
+        moviesToBeViewed.addAll(movieManager.getAllMovies());
+    }
 }
